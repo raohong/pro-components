@@ -41,7 +41,7 @@ const FieldSet: React.FC<ProFormFieldSetProps> = ({
         key: index,
         ignoreFormItem: true,
         ...((item.props as any) || {}),
-        value: value[index],
+        value: value?.[index],
         onChange: (itemValue: any) => {
           fieldSetOnChange(itemValue, index);
           (item as any).props.onChange?.(itemValue);
